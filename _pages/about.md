@@ -80,6 +80,10 @@ latest_posts:
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
   }
 
+  .post-header .post-title .font-weight-bold {
+    color: #fff;
+  }
+
   .post-header .desc {
     max-width: 680px;
     opacity: 0.86;
