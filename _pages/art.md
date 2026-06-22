@@ -90,6 +90,21 @@ nav_order: 2
       0 0 0 1px rgba(31, 36, 43, 0.08);
   }
 
+  .art-piece[data-frame="none"] {
+    aspect-ratio: auto;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .art-piece[data-frame="none"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
   .art-piece[data-kind="gif"] {
     --size: 98px;
     background: rgba(246, 252, 252, 0.86);
@@ -101,6 +116,11 @@ nav_order: 2
   }
 
   html[data-theme="dark"] .art-piece[data-kind="painting"] {
+    border: 0;
+    background: transparent;
+  }
+
+  html[data-theme="dark"] .art-piece[data-frame="none"] {
     border: 0;
     background: transparent;
   }
@@ -201,7 +221,7 @@ nav_order: 2
   <button class="art-piece" type="button" data-kind="sticker" style="--size:104px;--rotate:6deg;--delay:-0.4s"><img src="{{ '/assets/img/art/rat-01.png' | relative_url }}" alt="Sticker 01"></button>
   <button class="art-piece" type="button" data-kind="gif" style="--rotate:-8deg;--delay:-2.1s"><img src="{{ '/assets/img/art/coma-01.gif' | relative_url }}" alt="Motion sticker 01"></button>
   <button class="art-piece" type="button" data-kind="painting" style="--rotate:4deg;--delay:-3.1s;--drift:14px"><img src="{{ '/assets/img/art/painting-02.png' | relative_url }}" alt="Painting 02"></button>
-  <button class="art-piece" type="button" data-kind="sticker" style="--size:92px;--rotate:-6deg;--delay:-1.7s"><img src="{{ '/assets/img/art/mouse-01.png' | relative_url }}" alt="Sticker 02"></button>
+  <button class="art-piece" type="button" data-kind="sticker" data-frame="none" style="--size:110px;--rotate:-6deg;--delay:-1.7s"><img src="{{ '/assets/img/art/mouse-01.png' | relative_url }}" alt="Sticker 02"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:118px;--rotate:9deg;--delay:-2.8s"><img src="{{ '/assets/img/art/ball-01.png' | relative_url }}" alt="Sticker 03"></button>
   <button class="art-piece" type="button" data-kind="gif" style="--rotate:5deg;--delay:-0.8s"><img src="{{ '/assets/img/art/coma-03.gif' | relative_url }}" alt="Motion sticker 02"></button>
   <button class="art-piece" type="button" data-kind="painting" style="--rotate:-5deg;--delay:-2.4s;--drift:16px"><img src="{{ '/assets/img/art/painting-03.png' | relative_url }}" alt="Painting 03"></button>
@@ -213,7 +233,7 @@ nav_order: 2
   <button class="art-piece" type="button" data-kind="sticker" style="--size:110px;--rotate:7deg;--delay:-3.2s"><img src="{{ '/assets/img/art/ball-02.png' | relative_url }}" alt="Sticker 07"></button>
   <button class="art-piece" type="button" data-kind="gif" style="--rotate:-7deg;--delay:-0.9s"><img src="{{ '/assets/img/art/coma-07.gif' | relative_url }}" alt="Motion sticker 04"></button>
   <button class="art-piece" type="button" data-kind="painting" style="--rotate:-2deg;--delay:-1.4s;--drift:12px"><img src="{{ '/assets/img/art/painting-05.png' | relative_url }}" alt="Painting 05"></button>
-  <button class="art-piece" type="button" data-kind="sticker" style="--size:104px;--rotate:10deg;--delay:-2.6s"><img src="{{ '/assets/img/art/mouse-03.png' | relative_url }}" alt="Sticker 08"></button>
+  <button class="art-piece" type="button" data-kind="sticker" data-frame="none" style="--size:176px;--rotate:10deg;--delay:-2.6s"><img src="{{ '/assets/img/art/mouse-03.png' | relative_url }}" alt="Sticker 08"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:116px;--rotate:-9deg;--delay:-1.5s"><img src="{{ '/assets/img/art/rat-04.png' | relative_url }}" alt="Sticker 09"></button>
   <button class="art-piece" type="button" data-kind="gif" style="--rotate:4deg;--delay:-3.8s"><img src="{{ '/assets/img/art/coma-08.gif' | relative_url }}" alt="Motion sticker 05"></button>
   <button class="art-piece" type="button" data-kind="painting" style="--rotate:5deg;--delay:-2.9s"><img src="{{ '/assets/img/art/painting-06.png' | relative_url }}" alt="Painting 06"></button>
@@ -239,7 +259,7 @@ nav_order: 2
   <button class="art-piece" type="button" data-kind="gif" style="--rotate:5deg;--delay:-1.9s"><img src="{{ '/assets/img/art/coma-16.gif' | relative_url }}" alt="Motion sticker 11"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:102px;--rotate:-2deg;--delay:-0.6s"><img src="{{ '/assets/img/art/mouse-08.png' | relative_url }}" alt="Sticker 22"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:112px;--rotate:10deg;--delay:-2.4s"><img src="{{ '/assets/img/art/rat-09.png' | relative_url }}" alt="Sticker 23"></button>
-  <button class="art-piece" type="button" data-kind="sticker" style="--size:96px;--rotate:-8deg;--delay:-1.1s"><img src="{{ '/assets/img/art/ball-07.png' | relative_url }}" alt="Sticker 24"></button>
+  <button class="art-piece" type="button" data-kind="sticker" data-frame="none" style="--size:190px;--rotate:-8deg;--delay:-1.1s"><img src="{{ '/assets/img/art/ball-07.png' | relative_url }}" alt="Sticker 24"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:122px;--rotate:3deg;--delay:-3.1s"><img src="{{ '/assets/img/art/mouse-09.png' | relative_url }}" alt="Sticker 25"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:106px;--rotate:-6deg;--delay:-2.9s"><img src="{{ '/assets/img/art/rat-10.png' | relative_url }}" alt="Sticker 26"></button>
   <button class="art-piece" type="button" data-kind="sticker" style="--size:118px;--rotate:7deg;--delay:-0.8s"><img src="{{ '/assets/img/art/mouse-10.png' | relative_url }}" alt="Sticker 27"></button>
