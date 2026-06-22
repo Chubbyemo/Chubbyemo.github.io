@@ -28,7 +28,7 @@ latest_posts:
 
 Hi, I am Koukou Luo, a Computer Engineering undergraduate at the Hong Kong University of Science and Technology. I work across robotics, perception, mechanical systems, embedded systems, and advanced manufacturing.
 
-I am currently an undergraduate researcher on perception for humanoid robots, supervised by Prof. Ping Tan. My previous research and project work includes continuous carbon fiber additive manufacturing and aerial robot mechanical systems for RoboMaster.
+I am currently an undergraduate researcher on humanoids, supervised by Prof. Ping Tan. My previous research and project work includes continuous carbon fiber additive manufacturing and aerial robot mechanical systems for RoboMaster.
 
 ## Education
 
