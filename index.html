@@ -5,15 +5,85 @@
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/site-icon.png?v=60466d35d9cc49575a65163393955c7b"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://chubbyemo.github.io/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/art/">art </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Koukou</span> Luo </h1> <p class="desc">computer engineering, robotics, perception, and mechanical systems.</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?v=ad9049cb633bd6e11ea78e1a265c942d" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <div class="profile-meta"> <p class="profile-meta__school">HKUST Computer Engineering</p> <p><a href="mailto:kluoaf@connect.ust.hk">kluoaf@connect.ust.hk</a></p> </div> </div> </div> <div class="clearfix"> <style>
+  .post {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .post::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -5rem;
+    left: 50%;
+    width: 100vw;
+    height: min(74vh, 680px);
+    min-height: 560px;
+    transform: translateX(-50%);
+    background:
+      linear-gradient(90deg, rgba(3, 8, 14, 0.86) 0%, rgba(3, 8, 14, 0.52) 42%, rgba(3, 8, 14, 0.28) 100%),
+      linear-gradient(180deg, rgba(3, 8, 14, 0.1) 0%, rgba(3, 8, 14, 0.44) 62%, var(--global-bg-color) 100%),
+      url("/assets/img/home-mountain-bg-soft.jpg");
+    background-size: cover;
+    background-position: center 52%;
+  }
+
+  .post::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    left: 50%;
+    width: 100vw;
+    height: min(74vh, 680px);
+    min-height: 560px;
+    transform: translateX(-50%);
+    background:
+      radial-gradient(circle at 64% 46%, rgba(255, 255, 255, 0.14), transparent 28%),
+      linear-gradient(180deg, transparent 55%, var(--global-bg-color) 96%);
+    pointer-events: none;
+  }
+
+  .post-header {
+    min-height: clamp(170px, 25vh, 250px);
+    padding-top: clamp(4rem, 10vw, 7.2rem);
+    margin-bottom: clamp(1rem, 3vw, 2.3rem);
+  }
+
+  .post-header .post-title,
+  .post-header .desc {
+    color: #fff;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
+  }
+
+  .post-header .desc {
+    max-width: 680px;
+    opacity: 0.86;
+  }
+
+  .profile.float-right {
+    position: relative;
+    z-index: 2;
+  }
+
+  .profile img {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  }
+
   .profile .more-info {
     margin-top: 0.85rem;
+    padding: 0.58rem 0.72rem;
+    border-radius: 6px;
+    background: rgba(5, 10, 17, 0.42);
+    backdrop-filter: blur(8px);
   }
 
   .profile-meta {
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 0.86rem;
     line-height: 1.45;
-    color: var(--global-text-color-light);
+    color: rgba(255, 255, 255, 0.72);
   }
 
   .profile-meta p {
@@ -21,12 +91,12 @@
   }
 
   .profile-meta__school {
-    color: var(--global-text-color);
+    color: rgba(255, 255, 255, 0.92);
     font-weight: 400;
   }
 
   .profile-meta a {
-    color: var(--global-text-color-light);
+    color: rgba(255, 255, 255, 0.78);
     text-decoration: none;
   }
 
@@ -34,6 +104,41 @@
   .profile-meta a:focus-visible {
     color: var(--global-theme-color);
     text-decoration: underline;
+  }
+
+  .clearfix > p:nth-of-type(-n + 2) {
+    max-width: 680px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
+  }
+
+  .clearfix > h2:first-of-type {
+    clear: both;
+    padding-top: clamp(4.5rem, 11vh, 7.5rem);
+  }
+
+  @media (max-width: 767px) {
+    .post::before,
+    .post::after {
+      height: 760px;
+      min-height: 760px;
+      background-position: 55% center;
+    }
+
+    .post-header {
+      min-height: 150px;
+      padding-top: 4.5rem;
+    }
+
+    .profile.float-right {
+      float: none !important;
+      width: min(76vw, 320px);
+      margin: 0 auto 1.3rem;
+    }
+
+    .clearfix > h2:first-of-type {
+      padding-top: 3rem;
+    }
   }
 </style> <p>Hi, I am Koukou Luo, a Computer Engineering undergraduate at the Hong Kong University of Science and Technology. I work across robotics, perception, mechanical systems, embedded systems, and advanced manufacturing.</p> <p>I am currently an undergraduate researcher on humanoids, supervised by Prof. Ping Tan. My previous research and project work includes continuous carbon fiber additive manufacturing and aerial robot mechanical systems for RoboMaster.</p> <h2 id="education">Education</h2> <ul> <li> <strong>Hong Kong University of Science and Technology</strong>, BEng in Computer Engineering, expected Jun 2027</li> <li> <strong>ETH Zurich</strong>, exchange student, Sep 2025 - Feb 2026</li> </ul> <h2 id="selected-recognition">Selected Recognition</h2> <ul> <li>HKSAR Government Scholarship Fund - Talent Development Scholarship</li> <li>University’s Scholarship Scheme for Continuing Undergraduate Students</li> <li>Dean’s List honors across multiple semesters</li> <li>First Prize, RoboMaster 2024 University Championship Regional Competition, Hong Kong, Macau, Taiwan, and Overseas Division</li> <li>Second Prize, RoboMaster 2024 University Championship Final Tournament</li> </ul> <h2 id="publication">Publication</h2> <p>Xu, Z., He, S., Luo, K., Chen, S., &amp; Duan, M. (2025). “Additive Manufacturing With Continuous Fiber: A Comparison Between Prepreg and In-Situ Impregnated Fiber on Printing Accuracy, Bonding, and Mechanical Performance.” Manufacturing Science and Engineering Conference (MSEC 2025), Greenville, USA.</p> <h2 id="skills">Skills</h2> <ul> <li> <strong>Programming and systems:</strong> C++, Python, System Verilog, VHDL, Linux, embedded systems with STM32</li> <li> <strong>Robotics and simulation:</strong> Isaac Lab, perception, sensing and control collaboration</li> <li> <strong>Mechanical design:</strong> SolidWorks, 3D mechanical design, composite material structures</li> <li> <strong>Languages:</strong> Mandarin native, English advanced, IELTS 7.5</li> </ul> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Koukou Luo. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
