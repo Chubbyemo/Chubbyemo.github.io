@@ -141,6 +141,48 @@ latest_posts:
     padding-top: clamp(4.5rem, 11vh, 7.5rem);
   }
 
+  @media (min-width: 768px) {
+    article {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 270px);
+      column-gap: clamp(2.6rem, 7vw, 5.5rem);
+      align-items: start;
+    }
+
+    .profile.float-right {
+      float: none !important;
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+      margin: 0;
+      align-self: start;
+    }
+
+    .clearfix {
+      display: contents;
+    }
+
+    .clearfix > p:nth-of-type(-n + 2) {
+      grid-column: 1;
+      max-width: none;
+      margin-right: 0;
+    }
+
+    .clearfix > p:first-of-type {
+      grid-row: 1;
+      margin-top: 0;
+    }
+
+    .clearfix > p:nth-of-type(2) {
+      grid-row: 2;
+    }
+
+    .clearfix > h2:first-of-type,
+    .clearfix > h2:first-of-type ~ * {
+      grid-column: 1 / -1;
+    }
+  }
+
   @media (max-width: 767px) {
     .post::before,
     .post::after {
