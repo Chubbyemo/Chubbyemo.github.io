@@ -9,46 +9,13 @@ nav_order: 2
 
 <style>
   .art-intro {
-    max-width: 760px;
-    margin: 0 auto 1.45rem;
+    max-width: 660px;
+    margin: 0 auto 1.25rem;
     color: var(--global-text-color-light);
     font-family: "Roboto Slab", Georgia, serif;
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
     text-align: center;
-  }
-
-  .art-filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.45rem;
-    margin: 0 0 1.1rem;
-  }
-
-  .art-filter {
-    border: 1px solid var(--global-divider-color);
-    border-radius: 999px;
-    background: var(--global-bg-color);
-    color: var(--global-text-color);
-    padding: 0.34rem 0.76rem;
-    font: inherit;
-    font-size: 0.86rem;
-    line-height: 1;
-    cursor: pointer;
-    transition:
-      background 160ms ease,
-      border-color 160ms ease,
-      color 160ms ease,
-      transform 160ms ease;
-  }
-
-  .art-filter:hover,
-  .art-filter:focus-visible,
-  .art-filter.is-active {
-    border-color: var(--global-theme-color);
-    color: var(--global-theme-color);
-    transform: translateY(-1px);
   }
 
   .art-cloud {
@@ -58,17 +25,10 @@ nav_order: 2
     align-items: center;
     justify-content: center;
     gap: clamp(0.42rem, 1.6vw, 0.95rem);
-    width: min(1120px, calc(100vw - 2rem));
-    margin: 0.4rem calc(50% - min(560px, calc(50vw - 1rem))) 0;
-    padding: clamp(1.2rem, 3vw, 2.2rem) clamp(0.6rem, 2vw, 1.4rem) clamp(1.5rem, 3.5vw, 2.5rem);
-    overflow: hidden;
-    background:
-      linear-gradient(90deg, rgba(28, 36, 48, 0.055) 1px, transparent 1px),
-      linear-gradient(0deg, rgba(28, 36, 48, 0.045) 1px, transparent 1px),
-      linear-gradient(135deg, #f7f8fa 0%, #eef3f1 46%, #f3f1f5 100%);
-    background-size: 34px 34px, 34px 34px, auto;
-    border-top: 1px solid rgba(28, 36, 48, 0.08);
-    border-bottom: 1px solid rgba(28, 36, 48, 0.08);
+    max-width: 1080px;
+    margin: 0.25rem auto 0;
+    padding: clamp(0.4rem, 1.6vw, 1rem) 0 clamp(1.2rem, 3vw, 2rem);
+    overflow: visible;
   }
 
   .art-piece {
@@ -91,10 +51,6 @@ nav_order: 2
       box-shadow 180ms ease,
       opacity 180ms ease,
       transform 180ms ease;
-  }
-
-  .art-piece.is-hidden {
-    display: none;
   }
 
   .art-piece:hover,
@@ -137,14 +93,6 @@ nav_order: 2
   .art-piece[data-kind="gif"] {
     --size: 98px;
     background: rgba(246, 252, 252, 0.86);
-  }
-
-  html[data-theme="dark"] .art-cloud {
-    background:
-      linear-gradient(90deg, rgba(240, 244, 248, 0.055) 1px, transparent 1px),
-      linear-gradient(0deg, rgba(240, 244, 248, 0.045) 1px, transparent 1px),
-      linear-gradient(135deg, #171a1f 0%, #1b2220 48%, #211f25 100%);
-    border-color: rgba(240, 244, 248, 0.08);
   }
 
   html[data-theme="dark"] .art-piece {
@@ -245,15 +193,8 @@ nav_order: 2
 </style>
 
 <p class="art-intro">
-  Apart from being a human, I draw, make stickers, and occasionally let tiny visual thoughts escape. This page is a loose sketch wall, not a formal gallery.
+  Apart from being a human: drawings, stickers, and red packet covers. Stickers and red packet covers are available on WeChat: Chubbyemo.
 </p>
-
-<div class="art-filters" aria-label="Artwork filters">
-  <button class="art-filter is-active" type="button" data-filter="all">all</button>
-  <button class="art-filter" type="button" data-filter="painting">paintings</button>
-  <button class="art-filter" type="button" data-filter="sticker">stickers</button>
-  <button class="art-filter" type="button" data-filter="gif">motion</button>
-</div>
 
 <div class="art-cloud" id="art-cloud">
   <button class="art-piece" type="button" data-kind="painting" style="--rotate:-3deg;--delay:-1.2s;--drift:10px"><img src="{{ '/assets/img/art/painting-01.jpg' | relative_url }}" alt="Painting 01"></button>
@@ -328,22 +269,10 @@ nav_order: 2
 
 <script>
   (() => {
-    const filters = document.querySelectorAll(".art-filter");
     const pieces = document.querySelectorAll(".art-piece");
     const viewer = document.getElementById("art-viewer");
     const viewerImage = viewer.querySelector(".art-viewer__image");
     const closeButton = viewer.querySelector(".art-viewer__close");
-
-    filters.forEach((filter) => {
-      filter.addEventListener("click", () => {
-        const kind = filter.dataset.filter;
-        filters.forEach((item) => item.classList.toggle("is-active", item === filter));
-        pieces.forEach((piece) => {
-          const visible = kind === "all" || piece.dataset.kind === kind;
-          piece.classList.toggle("is-hidden", !visible);
-        });
-      });
-    });
 
     pieces.forEach((piece) => {
       piece.addEventListener("click", () => {
