@@ -159,27 +159,22 @@ latest_posts:
     }
 
     .clearfix {
-      display: contents;
+      grid-column: 1;
+      grid-row: 1;
     }
 
     .clearfix > p:nth-of-type(-n + 2) {
-      grid-column: 1;
       max-width: none;
       margin-right: 0;
     }
 
     .clearfix > p:first-of-type {
-      grid-row: 1;
       margin-top: 0;
-    }
-
-    .clearfix > p:nth-of-type(2) {
-      grid-row: 2;
     }
 
     .clearfix > h2:first-of-type,
     .clearfix > h2:first-of-type ~ * {
-      grid-column: 1 / -1;
+      margin-right: calc(-270px - clamp(2.6rem, 7vw, 5.5rem));
     }
   }
 
