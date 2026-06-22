@@ -69,9 +69,9 @@ latest_posts:
   }
 
   .post-header {
-    min-height: clamp(170px, 25vh, 250px);
-    padding-top: clamp(4rem, 10vw, 7.2rem);
-    margin-bottom: clamp(1rem, 3vw, 2.3rem);
+    min-height: clamp(92px, 13vh, 136px);
+    padding-top: clamp(4rem, 9vw, 6.4rem);
+    margin-bottom: clamp(0.15rem, 0.8vw, 0.55rem);
   }
 
   .post-header .post-title,
@@ -83,6 +83,9 @@ latest_posts:
   .post-header .desc {
     max-width: 680px;
     opacity: 0.86;
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.45;
   }
 
   .profile.float-right {
@@ -104,10 +107,10 @@ latest_posts:
   }
 
   .profile-meta {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-size: 0.86rem;
-    line-height: 1.45;
-    color: rgba(255, 255, 255, 0.72);
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.42;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .profile-meta p {
@@ -116,7 +119,7 @@ latest_posts:
 
   .profile-meta__school {
     color: rgba(255, 255, 255, 0.92);
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .profile-meta a {
@@ -133,19 +136,22 @@ latest_posts:
   .clearfix > p:nth-of-type(-n + 2) {
     max-width: 680px;
     color: rgba(255, 255, 255, 0.9);
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.66;
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
   }
 
   .clearfix > h2:first-of-type {
     clear: both;
-    padding-top: clamp(14rem, 34vh, 18rem);
+    padding-top: clamp(11rem, 26vh, 14rem);
   }
 
   @media (min-width: 768px) {
     article {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(230px, 270px);
-      column-gap: clamp(2.6rem, 7vw, 5.5rem);
+      column-gap: clamp(2rem, 4.8vw, 3.8rem);
       align-items: start;
     }
 
@@ -174,7 +180,7 @@ latest_posts:
 
     .clearfix > h2:first-of-type,
     .clearfix > h2:first-of-type ~ * {
-      margin-right: calc(-270px - clamp(2.6rem, 7vw, 5.5rem));
+      margin-right: calc(-270px - clamp(2rem, 4.8vw, 3.8rem));
     }
   }
 
@@ -187,8 +193,9 @@ latest_posts:
     }
 
     .post-header {
-      min-height: 150px;
+      min-height: 118px;
       padding-top: 4.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .profile.float-right {
