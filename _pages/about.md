@@ -138,7 +138,7 @@ latest_posts:
 
   .clearfix > h2:first-of-type {
     clear: both;
-    padding-top: clamp(4.5rem, 11vh, 7.5rem);
+    padding-top: clamp(14rem, 34vh, 18rem);
   }
 
   @media (min-width: 768px) {
