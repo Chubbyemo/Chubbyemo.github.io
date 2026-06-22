@@ -152,6 +152,11 @@ nav_order: 2
     background: rgba(244, 246, 248, 0.88);
   }
 
+  html[data-theme="dark"] .art-piece[data-kind="painting"] {
+    border: 0;
+    background: transparent;
+  }
+
   .art-piece:nth-of-type(5n) {
     margin-top: 1.2rem;
   }
