@@ -29,15 +29,85 @@ latest_posts:
 ---
 
 <style>
+  .post {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .post::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -5rem;
+    left: 50%;
+    width: 100vw;
+    height: min(74vh, 680px);
+    min-height: 560px;
+    transform: translateX(-50%);
+    background:
+      linear-gradient(90deg, rgba(3, 8, 14, 0.86) 0%, rgba(3, 8, 14, 0.52) 42%, rgba(3, 8, 14, 0.28) 100%),
+      linear-gradient(180deg, rgba(3, 8, 14, 0.1) 0%, rgba(3, 8, 14, 0.44) 62%, var(--global-bg-color) 100%),
+      url("{{ '/assets/img/home-mountain-bg-soft.jpg' | relative_url }}");
+    background-size: cover;
+    background-position: center 52%;
+  }
+
+  .post::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    left: 50%;
+    width: 100vw;
+    height: min(74vh, 680px);
+    min-height: 560px;
+    transform: translateX(-50%);
+    background:
+      radial-gradient(circle at 64% 46%, rgba(255, 255, 255, 0.14), transparent 28%),
+      linear-gradient(180deg, transparent 55%, var(--global-bg-color) 96%);
+    pointer-events: none;
+  }
+
+  .post-header {
+    min-height: clamp(170px, 25vh, 250px);
+    padding-top: clamp(4rem, 10vw, 7.2rem);
+    margin-bottom: clamp(1rem, 3vw, 2.3rem);
+  }
+
+  .post-header .post-title,
+  .post-header .desc {
+    color: #fff;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
+  }
+
+  .post-header .desc {
+    max-width: 680px;
+    opacity: 0.86;
+  }
+
+  .profile.float-right {
+    position: relative;
+    z-index: 2;
+  }
+
+  .profile img {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  }
+
   .profile .more-info {
     margin-top: 0.85rem;
+    padding: 0.58rem 0.72rem;
+    border-radius: 6px;
+    background: rgba(5, 10, 17, 0.42);
+    backdrop-filter: blur(8px);
   }
 
   .profile-meta {
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 0.86rem;
     line-height: 1.45;
-    color: var(--global-text-color-light);
+    color: rgba(255, 255, 255, 0.72);
   }
 
   .profile-meta p {
@@ -45,12 +115,12 @@ latest_posts:
   }
 
   .profile-meta__school {
-    color: var(--global-text-color);
+    color: rgba(255, 255, 255, 0.92);
     font-weight: 400;
   }
 
   .profile-meta a {
-    color: var(--global-text-color-light);
+    color: rgba(255, 255, 255, 0.78);
     text-decoration: none;
   }
 
@@ -58,6 +128,41 @@ latest_posts:
   .profile-meta a:focus-visible {
     color: var(--global-theme-color);
     text-decoration: underline;
+  }
+
+  .clearfix > p:nth-of-type(-n + 2) {
+    max-width: 680px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
+  }
+
+  .clearfix > h2:first-of-type {
+    clear: both;
+    padding-top: clamp(4.5rem, 11vh, 7.5rem);
+  }
+
+  @media (max-width: 767px) {
+    .post::before,
+    .post::after {
+      height: 760px;
+      min-height: 760px;
+      background-position: 55% center;
+    }
+
+    .post-header {
+      min-height: 150px;
+      padding-top: 4.5rem;
+    }
+
+    .profile.float-right {
+      float: none !important;
+      width: min(76vw, 320px);
+      margin: 0 auto 1.3rem;
+    }
+
+    .clearfix > h2:first-of-type {
+      padding-top: 3rem;
+    }
   }
 </style>
 
