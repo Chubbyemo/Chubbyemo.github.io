@@ -2,9 +2,9 @@
 layout: page
 title: Additive Manufacturing with Continuous Carbon Fiber
 description: In-situ impregnation 3D printing system for continuous carbon fiber composites.
-img: assets/img/3.jpg
+img: assets/img/project-carbon-fiber.jpg
 importance: 2
-category: research
+category: projects
 ---
 
 **Role:** Undergraduate Researcher

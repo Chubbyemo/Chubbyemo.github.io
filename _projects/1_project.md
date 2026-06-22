@@ -2,9 +2,9 @@
 layout: page
 title: Perception on Humanoid Robots
 description: Undergraduate research on perception for humanoid robot systems.
-img: assets/img/12.jpg
+img: assets/img/project-humanoid.jpg
 importance: 1
-category: robotics
+category: projects
 ---
 
 **Role:** Undergraduate Researcher

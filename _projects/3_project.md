@@ -2,9 +2,9 @@
 layout: page
 title: Aerial Robot Mechanical Systems Design
 description: Mechanical team leadership and project management for RoboMaster aerial robot systems.
-img: assets/img/5.jpg
+img: assets/img/project-rm-drone.jpg
 importance: 3
-category: engineering
+category: projects
 ---
 
 **Role:** Mechanical Team Lead and Project Manager

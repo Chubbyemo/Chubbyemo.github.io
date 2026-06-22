@@ -2,10 +2,9 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Selected robotics, research, and engineering projects.
+description: Selected projects ordered by timeline.
 nav: true
 nav_order: 1
-display_categories: [robotics, research, engineering]
 horizontal: false
 ---
 
