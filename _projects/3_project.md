@@ -15,6 +15,11 @@ category: projects
 
 Led project management and mechanical design for an autonomous drone platform, working closely with algorithm and embedded systems teams to ensure the mechanical system supported sensing and control requirements.
 
+Open-source documentation:
+
+- [RoboMaster open-source article 1](https://bbs.robomaster.com/article/54087?uid=88619)
+- [RoboMaster open-source article 2](https://bbs.robomaster.com/article/54086?uid=88619)
+
 Key work included:
 
 - Designed and optimized a composite-material drone protection system to improve crash survival rate.

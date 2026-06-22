@@ -8,6 +8,28 @@ nav_order: 1
 horizontal: false
 ---
 
+<style>
+  .projects .card figure {
+    aspect-ratio: 16 / 10;
+    margin: 0;
+    overflow: hidden;
+    background: #f3f5f6;
+  }
+
+  .projects .card picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .projects .card-img-top {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}

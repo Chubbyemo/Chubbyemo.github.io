@@ -9,11 +9,13 @@ nav_order: 2
 
 <style>
   .art-intro {
-    max-width: 720px;
-    margin: 0 auto 1.75rem;
+    max-width: 760px;
+    margin: 0 auto 1.45rem;
     color: var(--global-text-color-light);
-    font-size: 0.98rem;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 1rem;
     line-height: 1.7;
+    text-align: center;
   }
 
   .art-filters {
@@ -21,7 +23,7 @@ nav_order: 2
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.45rem;
-    margin: 0 0 1.35rem;
+    margin: 0 0 1.1rem;
   }
 
   .art-filter {
@@ -55,10 +57,18 @@ nav_order: 2
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: clamp(0.45rem, 1.8vw, 1.05rem);
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: clamp(0.6rem, 2vw, 1.2rem) 0 clamp(1rem, 3vw, 2rem);
+    gap: clamp(0.42rem, 1.6vw, 0.95rem);
+    width: min(1120px, calc(100vw - 2rem));
+    margin: 0.4rem calc(50% - min(560px, calc(50vw - 1rem))) 0;
+    padding: clamp(1.2rem, 3vw, 2.2rem) clamp(0.6rem, 2vw, 1.4rem) clamp(1.5rem, 3.5vw, 2.5rem);
+    overflow: hidden;
+    background:
+      linear-gradient(90deg, rgba(28, 36, 48, 0.055) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(28, 36, 48, 0.045) 1px, transparent 1px),
+      linear-gradient(135deg, #f7f8fa 0%, #eef3f1 46%, #f3f1f5 100%);
+    background-size: 34px 34px, 34px 34px, auto;
+    border-top: 1px solid rgba(28, 36, 48, 0.08);
+    border-bottom: 1px solid rgba(28, 36, 48, 0.08);
   }
 
   .art-piece {
@@ -68,14 +78,12 @@ nav_order: 2
     --drift: 12px;
     width: clamp(74px, var(--size), 230px);
     aspect-ratio: 1;
-    border: 0;
+    border: 1px solid rgba(34, 39, 46, 0.08);
     border-radius: 7px;
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(245, 247, 250, 0.45)),
-      var(--global-bg-color);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 10px 24px rgba(31, 36, 43, 0.1);
     cursor: zoom-in;
-    padding: 0.42rem;
+    padding: 0.46rem;
     transform: rotate(var(--rotate));
     animation: art-drift 6.5s ease-in-out infinite;
     animation-delay: var(--delay);
@@ -92,7 +100,7 @@ nav_order: 2
   .art-piece:hover,
   .art-piece:focus-visible {
     z-index: 3;
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 18px 42px rgba(31, 36, 43, 0.18);
     outline: 2px solid var(--global-theme-color);
     outline-offset: 3px;
     transform: rotate(0deg) translateY(-4px) scale(1.08);
@@ -109,14 +117,39 @@ nav_order: 2
 
   .art-piece[data-kind="painting"] {
     --size: 172px;
-    aspect-ratio: 4 / 5;
-    padding: 0.35rem;
-    background: #f8f6f1;
+    aspect-ratio: auto;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .art-piece[data-kind="painting"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow:
+      0 16px 30px rgba(31, 36, 43, 0.18),
+      0 0 0 1px rgba(31, 36, 43, 0.08);
   }
 
   .art-piece[data-kind="gif"] {
     --size: 98px;
-    background: #f7fbfb;
+    background: rgba(246, 252, 252, 0.86);
+  }
+
+  html[data-theme="dark"] .art-cloud {
+    background:
+      linear-gradient(90deg, rgba(240, 244, 248, 0.055) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(240, 244, 248, 0.045) 1px, transparent 1px),
+      linear-gradient(135deg, #171a1f 0%, #1b2220 48%, #211f25 100%);
+    border-color: rgba(240, 244, 248, 0.08);
+  }
+
+  html[data-theme="dark"] .art-piece {
+    border-color: rgba(240, 244, 248, 0.12);
+    background: rgba(244, 246, 248, 0.88);
   }
 
   .art-piece:nth-of-type(5n) {
@@ -207,7 +240,7 @@ nav_order: 2
 </style>
 
 <p class="art-intro">
-  A small corner for drawings, stickers, and visual experiments. I keep it separate from the research pages so the portfolio stays academic, while still leaving room for the visual side of how I think and make things.
+  Apart from being a human, I draw, make stickers, and occasionally let tiny visual thoughts escape. This page is a loose sketch wall, not a formal gallery.
 </p>
 
 <div class="art-filters" aria-label="Artwork filters">

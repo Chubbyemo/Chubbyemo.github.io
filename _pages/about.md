@@ -9,11 +9,13 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>HKUST Computer Engineering</p>
-    <p>Email: kluoaf@connect.ust.hk</p>
+    <div class="profile-meta">
+      <p class="profile-meta__school">HKUST Computer Engineering</p>
+      <p><a href="mailto:kluoaf@connect.ust.hk">kluoaf@connect.ust.hk</a></p>
+    </div>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: false # includes a list of news items
@@ -25,6 +27,39 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+<style>
+  .profile .more-info {
+    margin-top: 0.85rem;
+  }
+
+  .profile-meta {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+  }
+
+  .profile-meta p {
+    margin: 0.08rem 0;
+  }
+
+  .profile-meta__school {
+    color: var(--global-text-color);
+    font-weight: 400;
+  }
+
+  .profile-meta a {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+  }
+
+  .profile-meta a:hover,
+  .profile-meta a:focus-visible {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+</style>
 
 Hi, I am Koukou Luo, a Computer Engineering undergraduate at the Hong Kong University of Science and Technology. I work across robotics, perception, mechanical systems, embedded systems, and advanced manufacturing.
 
