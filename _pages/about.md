@@ -99,6 +99,9 @@ latest_posts:
 
   .profile img {
     border: 1px solid rgba(255, 255, 255, 0.24);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 38%;
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
   }
 
@@ -164,7 +167,7 @@ latest_posts:
       grid-column: 2;
       grid-row: 1;
       width: 100%;
-      margin: 0;
+      margin: calc(-1 * (clamp(92px, 13vh, 136px) + clamp(0.15rem, 0.8vw, 0.55rem))) 0 0;
       align-self: start;
     }
 
