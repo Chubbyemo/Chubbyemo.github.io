@@ -234,7 +234,9 @@ I am currently an undergraduate researcher on humanoids, supervised by Prof. Pin
 - First Prize, RoboMaster 2024 University Championship Regional Competition, Hong Kong, Macau, Taiwan, and Overseas Division
 - Second Prize, RoboMaster 2024 University Championship Final Tournament
 
-## Publication
+## Publications
+
+Yu, R., Lin, X., Ma, J., Wang, Y., **Luo, K.**, Ji, J., Wang, H., Wang, W., Zhang, R., Tan, P., Wu, T., Dai, R., Chen, Q., & Han, L. (2026). "[OmniContact: Chaining Meta-Skills via Contact Flow for Generalizable Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.26201)." arXiv:2606.26201.
 
 Xu, Z., He, S., Luo, K., Chen, S., & Duan, M. (2025). "Additive Manufacturing With Continuous Fiber: A Comparison Between Prepreg and In-Situ Impregnated Fiber on Printing Accuracy, Bonding, and Mechanical Performance." Manufacturing Science and Engineering Conference (MSEC 2025), Greenville, USA.
 
