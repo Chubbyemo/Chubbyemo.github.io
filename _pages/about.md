@@ -245,4 +245,4 @@ Xu, Z., He, S., Luo, K., Chen, S., & Duan, M. (2025). "[Additive Manufacturing W
 - **Programming and systems:** C++, Python, System Verilog, VHDL, Linux, embedded systems with STM32
 - **Robotics and simulation:** Isaac Lab, perception, sensing and control collaboration
 - **Mechanical design:** SolidWorks, 3D mechanical design, composite material structures
-- **Languages:** Mandarin native, English advanced, IELTS 7.5
+- **Languages:** Mandarin native, English advanced, IELTS 8
