@@ -219,7 +219,7 @@ latest_posts:
 
 Hi, I am Koukou Luo, a Computer Engineering undergraduate at the Hong Kong University of Science and Technology. I work across robotics, perception, mechanical systems, embedded systems, and advanced manufacturing.
 
-I am currently an undergraduate researcher on humanoids, supervised by Prof. Ping Tan. My previous research and project work includes continuous carbon fiber additive manufacturing and aerial robot mechanical systems for RoboMaster.
+I am currently a Robotics Intern at Noitom, supervised by Dr. Lei Han, and an undergraduate researcher on humanoids, supervised by Prof. Ping Tan. My previous research and project work includes continuous carbon fiber additive manufacturing and aerial robot mechanical systems for RoboMaster.
 
 ## Education
 
@@ -236,7 +236,7 @@ I am currently an undergraduate researcher on humanoids, supervised by Prof. Pin
 
 ## Publications
 
-Yu, R., Lin, X., Ma, J., Wang, Y., **Luo, K.**, Ji, J., Wang, H., Wang, W., Zhang, R., Tan, P., Wu, T., Dai, R., Chen, Q., & Han, L. (2026). "[OmniContact: Chaining Meta-Skills via Contact Flow for Generalizable Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.26201)." arXiv:2606.26201.
+Yu, R., Lin, X., Ma, J., Wang, Y., **Luo, K.**, Ji, J., Wang, H., Wang, W., Zhang, R., Tan, P., Wu, T., Dai, R., Chen, Q., & Han, L. (2026). "[OmniContact: Chaining Meta-Skills via Contact Flow for Generalizable Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.26201)." **Accepted to the Conference on Robot Learning (CoRL 2026).**
 
 Xu, Z., He, S., Luo, K., Chen, S., & Duan, M. (2025). "[Additive Manufacturing With Continuous Fiber: A Comparison Between Prepreg and In-Situ Impregnated Fiber on Printing Accuracy, Bonding, and Mechanical Performance](https://doi.org/10.1115/MSEC2025-155691)." Manufacturing Science and Engineering Conference (MSEC 2025), Greenville, USA.
 
