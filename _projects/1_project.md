@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research on Humanoids
-description: Humanoid loco-manipulation research and robotics internship at Noitom, including OmniContact (CoRL 2026).
+description: Humanoid loco-manipulation research and robotics internship at Noitom Robotics, including OmniContact (CoRL 2026).
 img: assets/img/project-humanoid.jpg
 importance: 1
 category: projects
@@ -13,13 +13,13 @@ category: projects
 
 **Timeline:** Jan 2026 - Now
 
-## Robotics Internship at Noitom
+## Robotics Internship at Noitom Robotics
 
 **Role:** Robotics Intern
 
 **Supervisor:** Dr. Lei Han
 
-I am currently a Robotics Intern at Noitom, working on humanoid robot systems under the supervision of Dr. Lei Han.
+I am currently a Robotics Intern at Noitom Robotics, working on humanoid robot systems under the supervision of Dr. Lei Han.
 
 ## OmniContact — CoRL 2026
 
